@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.layout.HBox?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.kursova.DeveloperController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="0.0" style="-fx-border-color: #E0FFFF;">
+         <children>
+            <AnchorPane layoutX="-5.0" prefHeight="54.0" prefWidth="608.0" style="-fx-background-color: #fff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Button fx:id="Help" layoutX="478.0" layoutY="10.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="99.0" text="Help" onAction="#handleHelpButton" />
+                  <ImageView fitHeight="52.0" fitWidth="113.0" layoutX="382.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="https://as2.ftcdn.net/v2/jpg/01/92/90/37/1000_F_192903759_5R4GE2CE60A0sM8Olw2DwOHxOINkJYLE.jpg"/>
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="400.0" prefWidth="213.0" style="-fx-background-color: #fff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Text layoutX="7.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insurance Management System" textAlignment="CENTER" wrappingWidth="224.2671775817871">
+                     <font>
+                        <Font name="Modern No. 20" size="21.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="Display" layoutX="49.0" layoutY="93.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="Display" onAction="#DisplayContract" />
+                  <Button fx:id="Exit" layoutX="47.0" layoutY="295.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="Exit" onAction="#ExitButton"/>
+                  <Button fx:id="AddContract" layoutX="48.0" layoutY="142.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="AddContract" onAction="#addContractButtonClicked" />
+                  <Button fx:id="DeleteContract" layoutX="49.0" layoutY="194.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="DeleteContract" onAction="#handleDeleteContractButton" />
+                  <Button fx:id="SaveToDatabase" layoutX="48.0" layoutY="244.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="SaveToDataBase" onAction="#SaveToDatabaseButton" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="CalculateTotalCost" layoutX="338.0" layoutY="111.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="CalculateTotalCost"  onAction="#calculateTotalCost">
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+            </Button>
+            <Button fx:id="SearchByRisk" layoutX="338.0" layoutY="170.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="SearchByRisk" onAction="#SearchByRisk" />
+            <Button fx:id="SortByRisk" layoutX="338.0" layoutY="227.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="138.0" text="SortByRisk" onAction="#SortByRiskButton" />
+            <Text layoutX="295.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analisys" textAlignment="CENTER" wrappingWidth="224.2671775817871">
+               <font>
+                  <Font name="Modern No. 20" size="21.0" />
+               </font>
+            </Text>
+         </children>
+         <HBox layoutX="250.0" layoutY="300.0">
+            <children>
+               <HBox>
+                  <children>
+                     <Text text="Policy Number: " />
+                     <TextField fx:id="policyNumberField" prefWidth="80" />
+                  </children>
+               </HBox>
+               <HBox>
+                  <children>
+                     <Text text="Policy Type: " />
+                     <TextField fx:id="policyTypeField" prefWidth="80" />
+                  </children>
+               </HBox>
+            </children>
+         </HBox>
+         <HBox layoutX="276.0" layoutY="330.0">
+            <children>
+               <HBox>
+                  <children>
+                     <Text text="Level Risk: " />
+                     <TextField fx:id="levelRiskField" prefWidth="80" />
+                  </children>
+               </HBox>
+               <HBox>
+                  <children>
+                     <Text text="Value:          " />
+                     <TextField fx:id="valueField" prefWidth="80" />
+                  </children>
+               </HBox>
+            </children>
+         </HBox>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <File name="MyFile" fileName="all.log" immediateFlush="false" append="false">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+        <SMTP name="Mail"
+              subject="Критична помилка в програмі"
+              to="artemkraynyk9@gmail.com"
+              from="nusuk123.1@gmail.com"
+              smtpHost="smtp.gmail.com"
+              smtpPort="465"
+              smtpUsername="nusuk123.1"
+              smtpPassword="skyfmnicpssymrhp"
+              smtpProtocol="smtps"
+              bufferSize="1">
+        </SMTP>
+
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MyFile"/>
+            <AppenderRef ref="Mail"/>
+        </Root>
+    </Loggers>
+</Configuration>
