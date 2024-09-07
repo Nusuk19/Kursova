@@ -10,4 +10,5 @@ public class ResultController {
     public void appendResult(String result) {
         resultTextArea.appendText(result + "\n"); // Додавання тексту та перенесення на новий рядок
     }
+
 }

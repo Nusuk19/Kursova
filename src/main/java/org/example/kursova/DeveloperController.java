@@ -3,13 +3,9 @@ package org.example.kursova;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import Developer.Developer;
-import Derivative.Derivative;
-import PatternCommand.*;
 import javafx.scene.control.TextField;
 
 public class DeveloperController {
-
     // Оголошення кнопок з FXML
     @FXML
     private Button AddContract;
@@ -33,13 +29,13 @@ public class DeveloperController {
     private TextField totalCostTextField;
 
     @FXML
-    private TextField policyNumberField;
+    TextField policyNumberField;
     @FXML
-    private TextField policyTypeField;
+    TextField policyTypeField;
     @FXML
-    private TextField levelRiskField;
+    TextField levelRiskField;
     @FXML
-    private TextField valueField;
+    TextField valueField;
 
     public String getPolicyNumber() {
         return policyNumberField.getText();
@@ -54,13 +50,9 @@ public class DeveloperController {
         return valueField.getText();
     }
 
-    private Developer developer; // Додано визначення змінної developer
+
     private MainApp mainApp; // Додано посилання на головний клас додатка
 
-    // Метод для ініціалізації об'єкта Developer
-    public void setDeveloper(Developer developer) {
-        this.developer = developer;
-    }
 
     public void setTotalCostTextField(TextField totalCostTextField) {
         this.totalCostTextField = totalCostTextField;
@@ -116,7 +108,7 @@ public class DeveloperController {
     }
 
     @FXML
-    public void addContractButtonClicked() {
+    private void addContractButtonClicked() {
         String policyNumber = policyNumberField.getText();
         String policyType = policyTypeField.getText();
         String valueString = valueField.getText();

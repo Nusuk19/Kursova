@@ -1,0 +1,5 @@
+2024-05-13 14:48:54.376 [JavaFX Application Thread] INFO  File.LoadFromDatabase - Успішне завантаження даних з бази даних
+2024-05-13 14:51:10.039 [JavaFX Application Thread] INFO  PatternCommand.AddConractCommand - Страхове зобов'язання додане до бази даних.
+
+2024-05-13 14:52:14.436 [JavaFX Application Thread] INFO  PatternCommand.DeleteContractCommand - Страхове зобов'язання видалене з бази даних.
+2024-05-13 14:53:33.397 [JavaFX Application Thread] INFO  File.LoadFromDatabase - Успішне завантаження даних з бази даних

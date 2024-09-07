@@ -30,7 +30,7 @@ public class SaveToDatabase {
     }
 
     // Метод для перевірки наявності контракту з вказаним policyNumber
-    private static boolean contractExists(Connection connection, String policyNumber) throws SQLException {
+    public static boolean contractExists(Connection connection, String policyNumber) throws SQLException {
         String query = "SELECT * FROM contracts WHERE policyNumber = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, policyNumber);
@@ -39,5 +39,6 @@ public class SaveToDatabase {
             }
         }
     }
+
 
 }

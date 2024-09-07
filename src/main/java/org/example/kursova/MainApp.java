@@ -10,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import PatternCommand.*;
 import Derivative.Derivative;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.example.kursova.CommandManager;
 
 import java.sql.Connection;
@@ -24,6 +26,7 @@ public class MainApp extends Application {
     private Derivative derivative;
     private Connection connection;
     private ResultWindow resultWindow;
+    private static final Logger logger = LogManager.getLogger(MainApp.class);
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -63,7 +66,7 @@ public class MainApp extends Application {
             commandManager.addCommand("sortByRisk", new SortByRiskCommand(derivative,connection));
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            logger.error(STR."Помилка при під'їднанні до бази даних: \{e.getMessage()}");
         }
     }
 
